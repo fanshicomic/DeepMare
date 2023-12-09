@@ -7,15 +7,49 @@
 
 import SwiftUI
 
-struct LandingView: View {
-    
+struct SleepResultView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-            Button("Fetch Sleep Data", action: <#T##() -> Void#>)
+            Text("SleepResult")
+            Text("SleepResult")
+            Text("SleepResult")
+            Text("SleepResult")
+            Text("SleepResult")
+        }
+        .padding()
+    }
+}
+
+struct SleepTestView: View {
+    var body: some View {
+        VStack {
+            Text("SleepTest")
+            Text("SleepTest")
+            Text("SleepTest")
+            Text("SleepTest")
+            Text("SleepTest")
+        }
+        .padding()
+    }
+}
+
+
+struct LandingView: View {
+    var body: some View {
+        NavigationView {
+            VStack {
+                NavigationLink {
+                    SleepResultView()
+                } label: {
+                    Text("Result")
+                }
+
+                NavigationLink {
+                    SleepTestView()
+                } label: {
+                    Text("Test")
+                }
+            }
         }
         .padding()
     }
