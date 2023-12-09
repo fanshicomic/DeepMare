@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		1288932E2B2424AA00DE702A /* DeepMareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1288932D2B2424AA00DE702A /* DeepMareApp.swift */; };
-		128893302B2424AA00DE702A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1288932F2B2424AA00DE702A /* ContentView.swift */; };
+		128893302B2424AA00DE702A /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1288932F2B2424AA00DE702A /* LandingView.swift */; };
 		128893322B2424AE00DE702A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 128893312B2424AE00DE702A /* Assets.xcassets */; };
 		128893352B2424AE00DE702A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 128893342B2424AE00DE702A /* Preview Assets.xcassets */; };
 		1288933F2B2424AF00DE702A /* DeepMareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1288933E2B2424AF00DE702A /* DeepMareTests.swift */; };
 		128893492B2424AF00DE702A /* DeepMareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128893482B2424AF00DE702A /* DeepMareUITests.swift */; };
 		1288934B2B2424AF00DE702A /* DeepMareUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1288934A2B2424AF00DE702A /* DeepMareUITestsLaunchTests.swift */; };
+		128893592B244F9D00DE702A /* SleepTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128893582B244F9D00DE702A /* SleepTracking.swift */; };
+		1288935D2B245A8200DE702A /* SleepData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1288935C2B245A8200DE702A /* SleepData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		1288932A2B2424AA00DE702A /* DeepMare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepMare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1288932D2B2424AA00DE702A /* DeepMareApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepMareApp.swift; sourceTree = "<group>"; };
-		1288932F2B2424AA00DE702A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1288932F2B2424AA00DE702A /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		128893312B2424AE00DE702A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		128893342B2424AE00DE702A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1288933A2B2424AF00DE702A /* DeepMareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeepMareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +46,9 @@
 		128893442B2424AF00DE702A /* DeepMareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeepMareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		128893482B2424AF00DE702A /* DeepMareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepMareUITests.swift; sourceTree = "<group>"; };
 		1288934A2B2424AF00DE702A /* DeepMareUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepMareUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		128893582B244F9D00DE702A /* SleepTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepTracking.swift; sourceTree = "<group>"; };
+		1288935A2B24512B00DE702A /* DeepMare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeepMare.entitlements; sourceTree = "<group>"; };
+		1288935C2B245A8200DE702A /* SleepData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +79,8 @@
 		128893212B2424A900DE702A = {
 			isa = PBXGroup;
 			children = (
+				1288935B2B24590900DE702A /* Models */,
+				128893572B244F3800DE702A /* SleepTracking */,
 				1288932C2B2424AA00DE702A /* DeepMare */,
 				1288933D2B2424AF00DE702A /* DeepMareTests */,
 				128893472B2424AF00DE702A /* DeepMareUITests */,
@@ -94,8 +101,9 @@
 		1288932C2B2424AA00DE702A /* DeepMare */ = {
 			isa = PBXGroup;
 			children = (
+				1288935A2B24512B00DE702A /* DeepMare.entitlements */,
 				1288932D2B2424AA00DE702A /* DeepMareApp.swift */,
-				1288932F2B2424AA00DE702A /* ContentView.swift */,
+				1288932F2B2424AA00DE702A /* LandingView.swift */,
 				128893312B2424AE00DE702A /* Assets.xcassets */,
 				128893332B2424AE00DE702A /* Preview Content */,
 			);
@@ -125,6 +133,22 @@
 				1288934A2B2424AF00DE702A /* DeepMareUITestsLaunchTests.swift */,
 			);
 			path = DeepMareUITests;
+			sourceTree = "<group>";
+		};
+		128893572B244F3800DE702A /* SleepTracking */ = {
+			isa = PBXGroup;
+			children = (
+				128893582B244F9D00DE702A /* SleepTracking.swift */,
+			);
+			path = SleepTracking;
+			sourceTree = "<group>";
+		};
+		1288935B2B24590900DE702A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1288935C2B245A8200DE702A /* SleepData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +281,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				128893302B2424AA00DE702A /* ContentView.swift in Sources */,
+				128893302B2424AA00DE702A /* LandingView.swift in Sources */,
+				1288935D2B245A8200DE702A /* SleepData.swift in Sources */,
+				128893592B244F9D00DE702A /* SleepTracking.swift in Sources */,
 				1288932E2B2424AA00DE702A /* DeepMareApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +445,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DeepMare/DeepMare.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DeepMare/Preview Content\"";
@@ -448,6 +475,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DeepMare/DeepMare.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DeepMare/Preview Content\"";
