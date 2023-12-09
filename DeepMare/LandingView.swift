@@ -7,33 +7,6 @@
 
 import SwiftUI
 
-struct SleepResultView: View {
-    var body: some View {
-        VStack {
-            Text("SleepResult")
-            Text("SleepResult")
-            Text("SleepResult")
-            Text("SleepResult")
-            Text("SleepResult")
-        }
-        .padding()
-    }
-}
-
-struct SleepTestView: View {
-    var body: some View {
-        VStack {
-            Text("SleepTest")
-            Text("SleepTest")
-            Text("SleepTest")
-            Text("SleepTest")
-            Text("SleepTest")
-        }
-        .padding()
-    }
-}
-
-
 struct LandingView: View {
     var body: some View {
         NavigationView {
@@ -41,17 +14,16 @@ struct LandingView: View {
                 NavigationLink {
                     SleepResultView()
                 } label: {
-                    Text("Result")
-                }
+                    Text("👽睡眠結果👽")
+                }.padding()
 
                 NavigationLink {
                     SleepTestView()
                 } label: {
-                    Text("Test")
-                }
+                    Text("🪓睡眠測試🪓")
+                }.padding()
             }
         }
-        .padding()
     }
 }
 

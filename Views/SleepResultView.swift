@@ -10,17 +10,13 @@ import SwiftUI
 struct SleepResultView: View {
     var body: some View {
         VStack {
-            Text("SleepResult")
-            Text("SleepResult")
-            Text("SleepResult")
-            Text("SleepResult")
-            Text("SleepResult")
+            Text("睡得好爽")
+            Text("睡得好爽")
+            Text("睡得好爽")
+            Text("睡得好爽")
+            Text("睡得好爽")
+            Text("睡得好爽")
         }
         .padding()
     }
 }
-
-#Preview {
-    ContentView()
-}
-

@@ -16,6 +16,8 @@
 		1288934B2B2424AF00DE702A /* DeepMareUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1288934A2B2424AF00DE702A /* DeepMareUITestsLaunchTests.swift */; };
 		128893592B244F9D00DE702A /* SleepTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128893582B244F9D00DE702A /* SleepTracking.swift */; };
 		1288935D2B245A8200DE702A /* SleepData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1288935C2B245A8200DE702A /* SleepData.swift */; };
+		2C79F46B2B24B6C500639624 /* SleepResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C79F46A2B24B6C500639624 /* SleepResultView.swift */; };
+		2C79F46D2B24B6E600639624 /* SleepTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C79F46C2B24B6E600639624 /* SleepTestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		128893582B244F9D00DE702A /* SleepTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepTracking.swift; sourceTree = "<group>"; };
 		1288935A2B24512B00DE702A /* DeepMare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeepMare.entitlements; sourceTree = "<group>"; };
 		1288935C2B245A8200DE702A /* SleepData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepData.swift; sourceTree = "<group>"; };
+		2C79F46A2B24B6C500639624 /* SleepResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepResultView.swift; sourceTree = "<group>"; };
+		2C79F46C2B24B6E600639624 /* SleepTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepTestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 		128893212B2424A900DE702A = {
 			isa = PBXGroup;
 			children = (
+				2C79F4692B24B6AE00639624 /* Views */,
 				1288935B2B24590900DE702A /* Models */,
 				128893572B244F3800DE702A /* SleepTracking */,
 				1288932C2B2424AA00DE702A /* DeepMare */,
@@ -149,6 +154,15 @@
 				1288935C2B245A8200DE702A /* SleepData.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2C79F4692B24B6AE00639624 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2C79F46A2B24B6C500639624 /* SleepResultView.swift */,
+				2C79F46C2B24B6E600639624 /* SleepTestView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,9 +295,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C79F46D2B24B6E600639624 /* SleepTestView.swift in Sources */,
 				128893302B2424AA00DE702A /* LandingView.swift in Sources */,
 				1288935D2B245A8200DE702A /* SleepData.swift in Sources */,
 				128893592B244F9D00DE702A /* SleepTracking.swift in Sources */,
+				2C79F46B2B24B6C500639624 /* SleepResultView.swift in Sources */,
 				1288932E2B2424AA00DE702A /* DeepMareApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
