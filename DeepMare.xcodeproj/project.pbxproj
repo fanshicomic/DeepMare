@@ -16,6 +16,8 @@
 		1288934B2B2424AF00DE702A /* DeepMareUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1288934A2B2424AF00DE702A /* DeepMareUITestsLaunchTests.swift */; };
 		128893592B244F9D00DE702A /* SleepTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128893582B244F9D00DE702A /* SleepTracking.swift */; };
 		1288935D2B245A8200DE702A /* SleepData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1288935C2B245A8200DE702A /* SleepData.swift */; };
+		2C7611202B372D0F0080EDC1 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C76111F2B372D0F0080EDC1 /* SpeechRecognizer.swift */; };
+		2C7611232B373DC00080EDC1 /* 盘旋.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2C7611222B373DC00080EDC1 /* 盘旋.mp3 */; };
 		2C79F46B2B24B6C500639624 /* SleepResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C79F46A2B24B6C500639624 /* SleepResultView.swift */; };
 		2C79F46D2B24B6E600639624 /* SleepTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C79F46C2B24B6E600639624 /* SleepTestView.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +53,8 @@
 		128893582B244F9D00DE702A /* SleepTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepTracking.swift; sourceTree = "<group>"; };
 		1288935A2B24512B00DE702A /* DeepMare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeepMare.entitlements; sourceTree = "<group>"; };
 		1288935C2B245A8200DE702A /* SleepData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepData.swift; sourceTree = "<group>"; };
+		2C76111F2B372D0F0080EDC1 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		2C7611222B373DC00080EDC1 /* 盘旋.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "盘旋.mp3"; sourceTree = "<group>"; };
 		2C79F46A2B24B6C500639624 /* SleepResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepResultView.swift; sourceTree = "<group>"; };
 		2C79F46C2B24B6E600639624 /* SleepTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepTestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +87,7 @@
 		128893212B2424A900DE702A = {
 			isa = PBXGroup;
 			children = (
+				2C7611212B373DAD0080EDC1 /* Audios */,
 				2C79F4692B24B6AE00639624 /* Views */,
 				1288935B2B24590900DE702A /* Models */,
 				128893572B244F3800DE702A /* SleepTracking */,
@@ -152,8 +157,17 @@
 			isa = PBXGroup;
 			children = (
 				1288935C2B245A8200DE702A /* SleepData.swift */,
+				2C76111F2B372D0F0080EDC1 /* SpeechRecognizer.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2C7611212B373DAD0080EDC1 /* Audios */ = {
+			isa = PBXGroup;
+			children = (
+				2C7611222B373DC00080EDC1 /* 盘旋.mp3 */,
+			);
+			path = Audios;
 			sourceTree = "<group>";
 		};
 		2C79F4692B24B6AE00639624 /* Views */ = {
@@ -270,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				128893352B2424AE00DE702A /* Preview Assets.xcassets in Resources */,
+				2C7611232B373DC00080EDC1 /* 盘旋.mp3 in Resources */,
 				128893322B2424AE00DE702A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C7611202B372D0F0080EDC1 /* SpeechRecognizer.swift in Sources */,
 				2C79F46D2B24B6E600639624 /* SleepTestView.swift in Sources */,
 				128893302B2424AA00DE702A /* LandingView.swift in Sources */,
 				1288935D2B245A8200DE702A /* SleepData.swift in Sources */,
@@ -465,9 +481,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DeepMare/Preview Content\"";
-				DEVELOPMENT_TEAM = G365K89X2X;
+				DEVELOPMENT_TEAM = Y759WLYUGN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "TODO: MICROPHONE_USAGE";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "TODO: SPEECH_RECOGNITION";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -495,9 +513,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DeepMare/Preview Content\"";
-				DEVELOPMENT_TEAM = G365K89X2X;
+				DEVELOPMENT_TEAM = Y759WLYUGN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "TODO: MICROPHONE_USAGE";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "TODO: SPEECH_RECOGNITION";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
