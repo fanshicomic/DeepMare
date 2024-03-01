@@ -12,7 +12,7 @@ class SleepDataFetcher {
 
     let healthStore = HKHealthStore()
 
-    func requestAuthorization() {
+    func requestAuthorization(completion: @escaping (Bool) -> Void) {
         guard HKHealthStore.isHealthDataAvailable() else {
             print("HealthKit is not available on this device.")
             return
@@ -25,30 +25,32 @@ class SleepDataFetcher {
         healthStore.requestAuthorization(toShare: nil, read: healthTypesToRead) { (success, error) in
             if success {
                 print("HealthKit authorization granted.")
-                self.fetchSleepData()
             } else {
                 print("HealthKit authorization failed. Error: \(error?.localizedDescription ?? "Unknown error")")
             }
+            
+            completion(success)
         }
     }
 
-    func fetchSleepData() {
+    func fetchSleepData(completion: @escaping ([HKCategorySample], Error?) -> Void) {
         guard let sleepType = HKObjectType.categoryType(forIdentifier: .sleepAnalysis) else {
             print("Sleep Analysis data type not available.")
             return
         }
 
-        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)
-        let query = HKSampleQuery(sampleType: sleepType, predicate: nil, limit: 1, sortDescriptors: [sortDescriptor]) { (query, samples, error) in
+        let endDate = Date()
+        let startDate = Calendar.current.date(byAdding: .hour, value: -24, to: endDate)
+
+        let predicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: .strictEndDate)
+        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: true)
+        let query = HKSampleQuery(sampleType: sleepType, predicate: predicate, limit: HKObjectQueryNoLimit, sortDescriptors: [sortDescriptor]) { (query, samples, error) in
             if let sleepSamples = samples as? [HKCategorySample] {
-                for sample in sleepSamples {
-                    print("Sleep Analysis Sample:")
-                    print("Start Date: \(sample.startDate)")
-                    print("End Date: \(sample.endDate)")
-                    print("Value: \(sample.value)")
-                }
+                completion(sleepSamples, error)
             } else {
                 print("Error querying sleep data: \(error?.localizedDescription ?? "Unknown error")")
+                
+                completion([], error)
             }
         }
 
